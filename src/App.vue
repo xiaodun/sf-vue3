@@ -7,7 +7,9 @@ import HelloWorld from "./components/HelloWorld.vue";
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <span>less</span>
+  <el-button>
+    <span class="less"> less </span>
+  </el-button>
 </template>
 
 <style lang="less">
@@ -18,7 +20,7 @@ import HelloWorld from "./components/HelloWorld.vue";
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  span {
+  .less {
     color: red;
     user-select: none;
   }
