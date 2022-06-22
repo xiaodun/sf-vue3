@@ -4,7 +4,6 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import zhCn from "element-plus/lib/locale/lang/zh-cn";
 
-import { h } from "vue";
 function showMessage() {
   ElMessageBox.prompt("Please input your e-mail", "Tip", {
     inputPattern:
