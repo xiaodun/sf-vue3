@@ -2,11 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
+import zhCn from "element-plus/lib/locale/lang/zh-cn";
+
 import { h } from "vue";
 function showMessage() {
   ElMessageBox.prompt("Please input your e-mail", "Tip", {
-    confirmButtonText: "OK",
-    cancelButtonText: "Cancel",
     inputPattern:
       /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
     inputErrorMessage: "Invalid Email",
@@ -15,11 +15,13 @@ function showMessage() {
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-  <el-button @click="showMessage">
-    <span class="less"> less </span>
-  </el-button>
+  <el-config-provider :locale="zhCn">
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+    <el-button @click="showMessage">
+      <span class="less"> less </span>
+    </el-button>
+  </el-config-provider>
 </template>
 
 <style lang="less">
