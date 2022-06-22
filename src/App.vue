@@ -4,9 +4,12 @@
 import HelloWorld from "./components/HelloWorld.vue";
 import { h } from "vue";
 function showMessage() {
-  ElMessage({
-    title: "Title",
-    message: h("i", { style: "color: teal" }, "This is a reminder"),
+  ElMessageBox.prompt("Please input your e-mail", "Tip", {
+    confirmButtonText: "OK",
+    cancelButtonText: "Cancel",
+    inputPattern:
+      /[\w!#$%&'*+/=?^_`{|}~-]+(?:\.[\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,
+    inputErrorMessage: "Invalid Email",
   });
 }
 </script>
