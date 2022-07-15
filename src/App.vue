@@ -3,7 +3,7 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
 import zhCn from "element-plus/lib/locale/lang/zh-cn";
-
+import Hero from "./components/Hero.jsx";
 function showMessage() {
   ElMessageBox.prompt("Please input your e-mail", "Tip", {
     inputPattern:
@@ -16,6 +16,7 @@ function showMessage() {
 <template>
   <el-config-provider :locale="zhCn">
     <img alt="Vue logo" src="./assets/logo.png" />
+    <Hero></Hero>
     <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
     <el-button @click="showMessage">
       <span class="less"> less </span>
