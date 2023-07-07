@@ -1,39 +1,56 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { useLoginStore } from "../store";
+import {
+  ref,
+  shallowReactive,
+  shallowRef,
+  onMounted,
+  reactive,
+  toRefs,
+} from "vue";
 
 defineProps<{ msg: string }>();
 
-const count = ref(0);
+const loginStore = useLoginStore();
+const onChangeName = () => {
+  loginStore.username = "wx";
+};
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
-
-  <p>See <code>README.md</code> for more information.</p>
-
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Docs
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-  </p>
-
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+  1
+  <div @click="onChangeName">{{ loginStore.username }}</div>
 </template>
 
 <style scoped>
+@keyframes myAnimation {
+  0% {
+    transform: translate(0, 0);
+    background-color: pink;
+  }
+  50% {
+    transform: translate(0, 100px);
+    background-color: pink;
+  }
+  75% {
+    transform: translate(200px, 100px);
+    background-color: blue;
+  }
+  100% {
+    transform: translate(300px, 300px) rotate(30deg);
+    opacity: 0;
+  }
+}
+
+.myDiv {
+  background: linear-gradient(to right, #00ffff, #0000ff, #800080);
+
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  animation: myAnimation 3s linear;
+}
+
 a {
   color: #42b983;
 }

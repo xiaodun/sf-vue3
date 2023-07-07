@@ -5,6 +5,7 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
