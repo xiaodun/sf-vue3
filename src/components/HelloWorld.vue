@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useLoginStore } from "../store";
+import { useLoginStore } from "@/store";
 import {
   ref,
   shallowReactive,
