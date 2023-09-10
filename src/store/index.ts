@@ -1,3 +1,1 @@
-import useLoginStore from "./loginStore";
-
-export { useLoginStore };
+export { default as useLoginStore } from "./loginStore";

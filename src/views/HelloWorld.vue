@@ -1,25 +1,8 @@
-<script setup lang="ts">
-import { useLoginStore } from "@/store";
-import {
-  ref,
-  shallowReactive,
-  shallowRef,
-  onMounted,
-  reactive,
-  toRefs,
-} from "vue";
-
-defineProps<{ msg: string }>();
-
-const loginStore = useLoginStore();
-const onChangeName = () => {
-  loginStore.username = "wx";
-};
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  1
-  <div @click="onChangeName">{{ loginStore.username }}</div>
+  <div>HelloWorld</div>
+  <el-button>切换</el-button>
 </template>
 
 <style scoped>

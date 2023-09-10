@@ -15,6 +15,7 @@ specifiers:
   unplugin-vue-components: ^0.19.6
   vite: 3.0.0
   vue: 3.3.0
+  vue-router: ^4.0.13
   vue-tsc: ^0.34.7
 
 dependencies:
@@ -23,6 +24,7 @@ dependencies:
   element-plus: 2.2.6_vue@3.3.0
   pinia: 2.1.4_typescript@4.7.4+vue@3.3.0
   vue: 3.3.0
+  vue-router: 4.0.13_vue@3.3.0
 
 devDependencies:
   '@types/node': 20.4.0
@@ -2339,6 +2341,15 @@ packages:
         optional: true
     dependencies:
       vue: 3.3.0
+
+  /vue-router/4.0.13_vue@3.3.0:
+    resolution: {integrity: sha512-LmXrC+BkDRLak+d5xTMgUYraT3Nj0H/vCbP+7usGvIl9Viqd1UP6AsP0i69pSbn9O0dXK/xCdp4yPw21HqV9Jw==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.3.0
+    dev: false
 
   /vue-tsc/0.34.17_typescript@4.7.4:
     resolution: {integrity: sha512-jzUXky44ZLHC4daaJag7FQr3idlPYN719/K1eObGljz5KaS2UnVGTU/XSYCd7d6ampYYg4OsyalbHyJIxV0aEQ==}
