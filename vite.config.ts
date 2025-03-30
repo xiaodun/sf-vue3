@@ -5,6 +5,8 @@ import Components from "unplugin-vue-components/vite";
 import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import path from "path";
+const pathSrc = path.resolve(__dirname, "src");
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -13,13 +15,16 @@ export default defineConfig({
     },
   },
   plugins: [
+    vue(),
+    vueJsx(),
     AutoImport({
+      imports: ["vue", "vue-router"],
       resolvers: [ElementPlusResolver()],
+      dts: true,
     }),
     Components({
       resolvers: [ElementPlusResolver()],
+      dts: true,
     }),
-    vue(),
-    vueJsx(),
   ],
 });
